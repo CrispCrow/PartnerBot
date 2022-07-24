@@ -1,0 +1,4 @@
+hikari==2.0.0.dev108
+motor==3.0.0
+python-dotenv==0.20.0
+hikari-lightbulb==2.2.4
