@@ -81,11 +81,11 @@ async def is_notify_channel_into_db(guild_id: int, channel_id: int) -> bool:
     """
 
     try:
-        partner_channel_id = await db.fetch_notify_channel(guild_id)
+        notify_channel_id = await db.fetch_notify_channel(guild_id)
     except KeyError:
         return False
 
-    return partner_channel_id == channel_id
+    return notify_channel_id == channel_id
 
 
 async def check_context(query: str) -> Optional[dict[str, str]]:
