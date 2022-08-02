@@ -15,7 +15,7 @@ async def on_guild_join(event: hikari.GuildJoinEvent) -> None:
 
 
 @events.listener(hikari.GuildLeaveEvent)
-async def on_guild_join(event: hikari.GuildLeaveEvent) -> None:
+async def on_guild_leave(event: hikari.GuildLeaveEvent) -> None:
     await db.delete_guild_from_db(event.guild_id)
 
 
